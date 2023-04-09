@@ -1,5 +1,5 @@
 import { App } from 'aws-cdk-lib';
-import { MyStack } from './stack';
+import { CitusStack } from './stack';
 
 // for development, use account/region from cdk cli
 const devEnv = {
@@ -9,7 +9,7 @@ const devEnv = {
 
 const app = new App();
 
-new MyStack(app, 'aurora-citus-dev', { env: devEnv });
+new CitusStack(app, 'Citus', { env: devEnv });
 // new MyStack(app, 'aurora-citus-prod', { env: prodEnv });
 
 app.synth();

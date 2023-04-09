@@ -5,7 +5,7 @@ import { NetworkLoadBalancedFargateService } from 'aws-cdk-lib/aws-ecs-patterns'
 import * as rds from 'aws-cdk-lib/aws-rds';
 import { Construct } from 'constructs';
 
-export class MyStack extends cdk.Stack {
+export class CitusStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: cdk.StackProps = {}) {
     super(scope, id, props);
 
