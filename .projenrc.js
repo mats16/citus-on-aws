@@ -1,6 +1,7 @@
 const { awscdk } = require('projen');
 const project = new awscdk.AwsCdkTypeScriptApp({
-  cdkVersion: '2.1.0',
+  projenVersion: '0.70.5',
+  cdkVersion: '2.73.0',
   defaultReleaseBranch: 'main',
   name: 'aurora-citus',
 
@@ -8,5 +9,12 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
+  tsconfig: {
+    compilerOptions: {
+      noUnusedLocals: false,
+      noUnusedParameters: false,
+    },
+  },
+  depsUpgrade: false,
 });
 project.synth();
